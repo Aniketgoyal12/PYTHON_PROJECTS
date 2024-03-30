@@ -24,3 +24,53 @@ e = ''
 for ele in d:
     e += ele
 print(e)
+
+
+
+
+#Same program using the string module\
+
+
+import random
+import string
+
+password = ''
+alphabet = string.ascii_letters
+numbers = string.digits
+symbols = string.punctuation
+# print(alphabet)
+# print(numbers)
+alp = int(input("Enter the number of alphabets\n"))
+num = int(input("Enter the number of digits\n"))
+sym = int(input("Enter the number of symbols\n"))
+for i in range(1,alp+1):
+    char = random.choice(alphabet)
+    print(char)
+    password = password + char
+for i in range(1,num+1):
+    number = random.choice(numbers)
+    password += number
+for i in range(1,sym+1):
+    symbol = random.choice(symbols)
+    password += symbol
+print(password)
+d = list(password)
+random.shuffle(d)
+e = ''
+for ele in d:
+    e += ele
+print(e)
+
+
+
+#Program to input the length of the password
+
+import random
+import string
+password=""
+alp=int(input("enter the length of password:\n"))
+alphabet= string.ascii_letters+string.digits+string.punctuation
+for i in range(1,alp+1):
+    c=random.choice(alphabet)
+    password+=c
+print(password)
